@@ -7,8 +7,24 @@
 	
 	<package name="mestre" extends="default" namespace="/mestre">		
 		
-        <action name="listar" method="listar" class="mestreAction">
-            <result>listar.jsp</result>
+       	<action name="listar" method="listar" class="mestreAction">
+            <result name="success" type="dispatcher">listar.jsp</result>
+        </action>
+        
+        <action name="novo" method="prepare" class="mestreAction"> 
+            <result type="dispatcher" >cadastrar.jsp</result>
+        </action>
+        
+        <action name="cadastrar" method="inserir" class="mestreAction">    
+            <result name="success" type="chain" >
+            	<param name="actionName">listar</param>
+            </result>
+            <result name="error" type="chain" >
+            	<param name="actionName">listar</param>     	           	
+            </result>
+            <result name="input" type="chain" >
+            	<param name="actionName">listar</param>     	       	
+            </result> 
         </action>
         
 	</package>

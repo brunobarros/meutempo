@@ -7,5 +7,8 @@
     <bean id="mestreDAO" class="br.com.meutempo.dao.hibernate.HibernateMestreDAO" scope="prototype">
     	<constructor-arg ref="sessionFactory" />
     </bean>   
+    <bean id="prioridadeDAO" class="br.com.meutempo.dao.hibernate.HibernatePrioridadeDAO" scope="prototype">
+    	<constructor-arg ref="sessionFactory" />
+    </bean>   
         
 </beans>

@@ -7,27 +7,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../includes/css/estilo.css" type="text/css" /> 
 <title>Meu Tempo - Lista Mestre</title>
-
-<script type="text/css">
-	body {
-		margin-top: 0px;
-	}
-
-	h1 {
-		text-color: red;
-	}
-</script>
-
 </head>
 
 <body>
 
-<h1>Lista mestre de atividades </h1>
-
-<s:iterator value="listaMestres">
-	<h2><s:property value="id" /> <s:property value="descricao" /></h2> <br/>
-</s:iterator>
+	<h1>Lista Mestre de atividades </h1>
+	
+	<ul>
+		<li><a href="<s:url action="novo" namespace="/mestre" includeParams="none" />" title="Novo mestre">Novo</a></li>
+	</ul>
+	
+	<s:actionerror/>
+	<s:actionmessage/>
+	
+	<s:iterator value="listaMestres">
+		<h2><s:property value="descricao" /></h2> <br/>
+		<s:property value="prioridade.descricao" /> <br/>
+		<p><s:property value="dataInclusao" /> <br/>
+		Concluído: <s:property value="concluido" /></p>
+	</s:iterator>
+	
+	<%@include file="../includes/rodape.jsp" %>
 
 </body>
 </html>

@@ -7,16 +7,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="includes/css/estilo.css" type="text/css" />
 <title>Meu Tempo - Sistema de Administração do Tempo</title>
 </head>
 <body>
 
-	<h1>Meu Tempo - Sistema de Administração do Tempo</h1>
+	<h1>Meu Tempo</h1>
+	<h2>Sistema de Administração do Tempo</h2>
 
-	<h3>Projeto criado!</h3>
-	
 	<ul>
-		<li><a href="<s:url action="listar" namespace="/mestre" includeParams="none" />" title="Objetivos Mestre">Listar objetivos mestre</a></li>
+		<li><a href="<s:url action="listar" namespace="/mestre" includeParams="none" />" title="Objetivos Mestre">Listar Mestre</a></li>
 	</ul>
+	
+	<%@include file="includes/rodape.jsp" %>
 </body>
 </html>

@@ -1,0 +1,35 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	margin: 30px;
+	font-family: "lucida grande", verdana, lucida, sans-serif;
+	font-size: 9pt;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	color: #505050;	
+}
+
+h1 {
+	font-size: 16pt;
+	margin-bottom: 20px;
+	margin-top: 2px;
+}
+
+h2 {
+	font-size: 12pt;
+	margin: 20px 0px 0px 0px;
+}
+
+p {
+	margin: 0px;
+}
+
+#footer {
+	clear: both;
+	margin: 0 1px;
+}
+
+#footer p {
+	font-size: 8pt;
+	text-align: center;
+}
